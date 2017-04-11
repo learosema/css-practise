@@ -1,0 +1,40 @@
+{
+  "name": "css-practise",
+  "version": "1.0.0",
+  "description": "Personal playground for css experiments",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build -s && concurrently \"npm run dev-server -s\" \"opn http://localhost:9090\"",
+    "build": "npm run build-css -s && npm run build-html -s",
+    "build-css": "node-sass src -o public && postcss --use postcss-cssnext -d public public/*.css",
+    "build-html": "pug src -o public",
+    "dev-server": "light-server -s public -p 9090 -w 'src/**/*.pug # npm run build-html' -w 'src/**/*.scss # npm run build-css # reloadcss'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terabaud/css-practise.git"
+  },
+  "author": "Lutz Rosema",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/terabaud/css-practise/issues"
+  },
+  "homepage": "https://github.com/terabaud/css-practise#readme",
+  "devDependencies": {
+    "concurrently": "^3.4.0",
+    "gh-pages": "^0.12.0",
+    "light-server": "^2.0.1",
+    "node-sass": "^4.5.2",
+    "opn-cli": "^3.1.0",
+    "postcss": "^5.2.16",
+    "postcss-cli": "^3.1.1",
+    "postcss-cssnext": "^2.10.0",
+    "pug": "^2.0.0-beta11",
+    "pug-cli": "^1.0.0-alpha6",
+    "shelljs": "^0.7.7"
+  },
+  "dependencies": {}
+}
