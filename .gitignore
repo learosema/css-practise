@@ -30,3 +30,4 @@ node_modules
 # Build folder
 public/*.html
 public/*.css
+public/*.css.map
