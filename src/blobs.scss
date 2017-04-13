@@ -1,3 +1,5 @@
+@import "./node_modules/mathsass/dist/_math.scss";
+
 body {
 	margin: auto;
 	width: 100vw; 
@@ -73,7 +75,7 @@ body:active {
 @for $i from 1 through 100 {
 	.blob:nth-child(#{$i}) {
 		background: hsl($i*36, 255, 50%);
-		animation-delay: #{-$i*0.2*$i}s;
+		animation-delay: #{-$i*0.2*pow(1.001,$i)}s;
 	}	
 }
-// math functions don't work yet :(
+// ya math functions do work now :)
