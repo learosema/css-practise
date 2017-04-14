@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "test.css",
+	"sources": [
+		"../src/test.scss"
+	],
+	"sourcesContent": [
+		"$badass: #BAD455;\r\n\r\nbody {\r\n  background: #222;\r\n  color: #fff;\r\n  font-family: sans-serif;\r\n  user-select: none;\r\n}"
+	],
+	"names": [],
+	"mappings": "AAEA,AAAA,IAAI,CAAC;EACH,UAAU,EAAE,IAAI;EAChB,KAAK,EAAE,IAAI;EACX,WAAW,EAAE,UAAU;EACvB,WAAW,EAAE,IAAI,GAClB"
+}
