@@ -9,7 +9,7 @@ const render = data => {
                     item.name.slice(0,4) !== "wip.")
     .map(item => item.name.replace(".pug", ""))
     .map(name => `<li><a href="${name}.html">${name}</a></li>`);
-  container.innerHTML = `<nav><ul>${demos.join('')}</ul></nav>`;
+  container.innerHTML = `<nav><ul>${demos.join('')}</ul></nav>`
 }
 
 const http = (url, callback) => {
