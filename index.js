@@ -6,7 +6,7 @@
 var render = function render(data) {
   var container = document.querySelector('.container');
   var demos = data.filter(function (item) {
-    return item.name !== "index.pug" && item.name.slice(-4) === ".pug";
+    return item.name !== "index.pug" && item.name.slice(-4) === ".pug" && item.name.slice(0, 4) !== "wip.";
   }).map(function (item) {
     return item.name.replace(".pug", "");
   }).map(function (name) {
