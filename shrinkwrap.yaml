@@ -2,6 +2,7 @@ dependencies:
   concurrently@^3.4.0: 3.4.0
   gh-pages@^0.12.0: 0.12.0
   http-server@^0.9.0: 0.9.0
+  mathsass@^0.9.5: 0.9.5
   node-sass@^4.5.2: 4.5.2
   opn-cli@^3.1.0: 3.1.0
   postcss-cli@^3.1.1: 3.1.1
@@ -661,6 +662,7 @@ packages:
     resolution: 1d17679c069cda5d040991a09dbc2c0db377e55e
   /map-obj/1.0.1: d933ceb9205d82bdcf4886f6742bdc2b4dea146d
   /math-expression-evaluator/1.2.16: b357fa1ca9faefb8e48d10c14ef2bcb2d9f0a7c9
+  /mathsass/0.9.5: a63ebe022171eaf82e3d57b5f2ad3d687e347a3e
   /meow/3.7.0:
     dependencies:
       camelcase-keys: 2.1.0
