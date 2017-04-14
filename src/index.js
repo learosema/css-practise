@@ -4,7 +4,9 @@
 const render = data => {
   const container = document.querySelector('.container')
   const demos = data
-    .filter(item => item.name !== "index.pug" && item.name.slice(-4) === ".pug")
+    .filter(item => item.name !== "index.pug" && 
+                    item.name.slice(-4) === ".pug" &&
+                    item.name.slice(0,4) !== "wip_")
     .map(item => item.name.replace(".pug", ""))
     .map(name => `<li><a href="${name}.html">${name}</a></li>`);
   container.innerHTML = `<nav><ul>${demos.join('')}</ul></nav>`;
