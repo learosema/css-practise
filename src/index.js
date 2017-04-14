@@ -6,7 +6,7 @@ const render = data => {
   const demos = data
     .filter(item => item.name !== "index.pug" && 
                     item.name.slice(-4) === ".pug" &&
-                    item.name.slice(0,4) !== "wip_")
+                    item.name.slice(0,4) !== "wip.")
     .map(item => item.name.replace(".pug", ""))
     .map(name => `<li><a href="${name}.html">${name}</a></li>`);
   container.innerHTML = `<nav><ul>${demos.join('')}</ul></nav>`;
