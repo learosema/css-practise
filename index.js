@@ -10,7 +10,7 @@ var render = function render(data) {
   }).map(function (item) {
     return item.name.replace(".pug", "");
   }).map(function (name) {
-    return "<li><a href=\"" + name + ".html\">" + name + "</a></li>";
+    return "\n        <li>\n          <a href=\"" + name + ".html\">\n            <iframe src=\"" + name + "\"></iframe>\n            <div>" + name + "</div>\n          </a>\n        </li>";
   });
   container.innerHTML = "<nav><ul>" + demos.join('') + "</ul></nav>";
 };
