@@ -1,38 +1,45 @@
+body, .thingy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background: #222;
-}
-
-.container {
-  width: 90vmin;
-  height: 90vmin;
-  background: #639;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  overflow: hidden;  
+  animation: huerotator 60s linear infinite;
 }
 
 .thingy {
-  position: relative;
-  background: rgba(255,255,255,0.2);
-  border: 1px solid #000;
+  background: rgba(255,255,255,0.05);
   width: 90%;
   height: 90%;
-  animation: rotator 10s linear infinite;
+  animation: rotator 60s linear infinite;
 }
 
-.thingy > .thingy {
-  position: absolute;
-  transform: translate(0, 0) rotate(30deg);
+body > .thingy {
+  width: 100vmax;
+  height: 100vmax;
+  background: #639;
+  box-shadow: 0 0 0 30vmax #639;
 }
 
 @keyframes rotator {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% { 
+    transform: rotate(0deg); 
+  }
+  100% { 
+    transform: rotate(360deg);    
+  }
 }
+
+@keyframes huerotator {
+  0% { 
+    filter: hue-rotate(0deg); 
+  }
+  100% { 
+    filter: hue-rotate(360deg);    
+  }
+}
+

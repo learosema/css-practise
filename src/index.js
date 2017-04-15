@@ -8,7 +8,13 @@ const render = data => {
                     item.name.slice(-4) === ".pug" &&
                     item.name.slice(0,4) !== "wip.")
     .map(item => item.name.replace(".pug", ""))
-    .map(name => `<li><a href="${name}.html">${name}</a></li>`);
+    .map(name => `
+        <li>
+          <a href="${name}.html">
+            <iframe src="${name}"></iframe>
+            <div>${name}</div>
+          </a>
+        </li>`);
   container.innerHTML = `<nav><ul>${demos.join('')}</ul></nav>`
 }
 
