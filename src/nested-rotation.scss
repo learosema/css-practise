@@ -1,0 +1,38 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #222;
+}
+
+.container {
+  width: 90vmin;
+  height: 90vmin;
+  background: #639;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.thingy {
+  position: relative;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid #000;
+  width: 90%;
+  height: 90%;
+  animation: rotator 10s linear infinite;
+}
+
+.thingy > .thingy {
+  position: absolute;
+  transform: translate(0, 0) rotate(30deg);
+}
+
+@keyframes rotator {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
