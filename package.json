@@ -4,7 +4,7 @@
   "description": "Personal playground for css experiments",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build -s && concurrently \"npm run httpd -s\" \"npm run watch-js -s\" \"npm run watch-css -s\" \"npm run watch-postcss -s\" \"npm run watch-html -s\" \"opn http://localhost:8080\"",
+    "start": "npm run build -s && concurrently \"npm run httpd -s\" \"npm run watch-js -s\" \"npm run watch-css -s\" \"npm run watch-html -s\" \"opn http://localhost:8080\"",
     "build": "npm run build-css -s && npm run build-html -s && npm run build-js",
     "build-js": "babel src -d public",
     "build-css": "node-sass -o public src && postcss --use postcss-cssnext -d public public/*.css",
