@@ -4,6 +4,10 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Document
+    link(rel="stylesheet", href="checkboxes.css")
+    title A pixel editor using checkboxes :-)
   body
-    
+    .container
+      - for (var i = 100; i--;)
+        input.checkbox(type="checkbox", checked=(i%3 === 0))
+      
