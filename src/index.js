@@ -1,21 +1,25 @@
 // Just a little bit of javascript to create a little 
 // showcase for all the demos in the repository
 
+const $$ = (sel, con) => Array.prototype.slice.call((con || document).querySelectorAll(sel))
+
 const render = data => {
-  const container = document.querySelector('.container')
+  const container = $$('.container')[0]
   const demos = data
     .filter(item => item.name !== "index.pug" && 
                     item.name.slice(-4) === ".pug" &&
                     item.name.slice(0,4) !== "wip.")
     .map(item => item.name.replace(".pug", ""))
     .map(name => `
-        <li>
+        <li class="hidden">
           <a href="${name}.html">
             <iframe src="${name}"></iframe>
             <div>${name}</div>
           </a>
         </li>`);
-  container.innerHTML = `<nav><ul>${demos.join('')}</ul></nav>`
+  container.innerHTML = `<ul>${demos.join('')}</ul>`
+  setTimeout(() => $$('.hidden').map(el => el.classList.remove('hidden')), 5)
+  
 }
 
 const http = (url, callback) => {

@@ -22,7 +22,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #aef;
+  color: #bada55;
   
 }
 
@@ -55,6 +55,8 @@ ul {
 
   li { 
     float: left; 
+    opacity: 1.0;
+    transition: opacity 0.5s, transform 0.5s;
     margin: 0 1em 1em 0;
     position: relative;
     width: 30vw; height: 30vh;
@@ -70,7 +72,7 @@ ul {
       padding: 10px;
       text-align: center;
       font-size: 1.2em;
-      background: rgba(0,0,0,.4);
+      background: rgba(0,0,0,.8);
     }
 
     a::after {
@@ -81,3 +83,13 @@ ul {
   }
 }
 
+.hidden {
+  opacity: 0.0;
+  transform: translate(0,-20px);
+}
+
+@for $i from 1 through 100 {
+  li:nth-child(#{$i}) {
+    transition-delay: #{$i*0.1}s;
+  }
+}
