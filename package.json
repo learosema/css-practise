@@ -4,6 +4,7 @@
   "description": "Personal playground for css experiments",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf public",
     "start": "npm run build -s && concurrently \"npm run httpd -s\" \"npm run watch-js -s\" \"npm run watch-css -s\" \"npm run watch-html -s\" \"opn http://localhost:8080\"",
     "build": "npm run build-css -s && npm run build-html -s && npm run build-js",
     "build-js": "babel src -d public",
@@ -14,7 +15,7 @@
     "watch-html": "pug -o public -w src",
     "httpd": "http-server -c-1 -d public",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "npm run build",
+    "predeploy": "npm run clean && npm run build",
     "deploy": "gh-pages -d public"
   },
   "repository": {
@@ -42,7 +43,8 @@
     "postcss-cli": "^3.1.1",
     "postcss-cssnext": "^2.10.0",
     "pug": "^2.0.0-beta11",
-    "pug-cli": "^1.0.0-alpha6"
+    "pug-cli": "^1.0.0-alpha6",
+    "rimraf": "^2.6.1"
   },
   "dependencies": {}
 }

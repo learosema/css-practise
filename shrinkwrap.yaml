@@ -14,6 +14,7 @@ dependencies:
   postcss@^5.2.16: 5.2.16
   pug-cli@^1.0.0-alpha6: 1.0.0-alpha6
   pug@^2.0.0-beta11: 2.0.0-beta11
+  rimraf@^2.6.1: 2.6.1
 packages:
   /abbrev/1.1.0: d0554c2256636e2f56e7c2e5ad183f859428d81f
   /acorn-globals/3.1.0:
