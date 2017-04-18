@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: center; //space-around;
+  align-items: center;
+  background: #222;
+  margin: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.ball {
+  width: 10vh;
+  height: 10vh;
+  margin: 1vh;
+  background: #fff;
+  border-radius: 50%;
+  animation: 3s bounce cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+}
+
+@keyframes bounce {
+  0% { transform: scaleX(1.0) scaleY(1.0) translateY(0); }
+  25% { transform: scaleX(1.2) scaleY(1.0) translateY(10vh); }
+  50% { transform: scaleX(1.0) scaleY(1.2) translateY(0); }
+  75% { transform: scaleX(1.2) scaleY(1.0) translateY(10vh); }
+}
+
+@for $i from 1 through 5 {
+  .ball:nth-child(#{$i}) {
+    animation-delay: #{-0.3*$i}s;
+  }
+}
