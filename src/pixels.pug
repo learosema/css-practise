@@ -8,6 +8,9 @@ html(lang="en")
     title A pixel editor using checkboxes :-)
   body
     .container
-      - for (var i = 100; i--;)
-        input.checkbox(type="checkbox", checked=(i%3 === 0))
+      - for (var i = 100; i--;) 
+        input.checkbox(type="checkbox", checked=(i%3 === 0), id="pixel" + i)
+        label.checkbox-label(for="pixel" + i)
+      
+        
       

@@ -26,22 +26,20 @@ body {
   flex-wrap: wrap;
 }
 
-.checkbox {
-  appearance: none;
+.checkbox-label {
+  display: block;
   width: 10%;
   height: 10%;
   margin: 0;
   padding: 0;
   position: relative;
-}
-
-.checkbox::after {
-  @include fit();
-  content: '';
-  display: block;
   background: #000;
 }
 
-.checkbox:checked::after {
-  background: #fff;
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked + label {
+  background: #bada55;
 }
