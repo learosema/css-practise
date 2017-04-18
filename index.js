@@ -3,25 +3,16 @@
 // Just a little bit of javascript to create a little 
 // showcase for all the demos in the repository
 
-var $$ = function $$(sel, con) {
-  return Array.prototype.slice.call((con || document).querySelectorAll(sel));
-};
-
 var render = function render(data) {
-  var container = $$('.container')[0];
+  var container = document.querySelector('.container');
   var demos = data.filter(function (item) {
     return item.name !== "index.pug" && item.name.slice(-4) === ".pug" && item.name.slice(0, 4) !== "wip.";
   }).map(function (item) {
     return item.name.replace(".pug", "");
   }).map(function (name) {
-    return "\n        <li class=\"hidden\">\n          <a href=\"" + name + ".html\">\n            <iframe src=\"" + name + "\"></iframe>\n            <div>" + name + "</div>\n          </a>\n        </li>";
+    return "\n        <li>\n          <a href=\"" + name + ".html\">\n            <iframe src=\"" + name + "\"></iframe>\n            <div>" + name + "</div>\n          </a>\n        </li>";
   });
-  container.innerHTML = "<ul>" + demos.join('') + "</ul>";
-  setTimeout(function () {
-    return $$('.hidden').map(function (el) {
-      return el.classList.remove('hidden');
-    });
-  }, 5);
+  container.innerHTML = "<nav><ul>" + demos.join('') + "</ul></nav>";
 };
 
 var http = function http(url, callback) {
