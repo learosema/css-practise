@@ -53,9 +53,8 @@ body {
   
   .card__front {
     @include fit();    
-    // background: mediumseagreen;
+    background: darkslategray;
     background: linear-gradient(45deg, darkslategray, mediumpurple);
-    
     backface-visibility: hidden;
   }
 
