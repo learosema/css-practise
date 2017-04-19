@@ -1,4 +1,4 @@
-## CSS Practises
+## Daily CSS experiments
 
 This is a pug + scss playground for my personal scss practising purposes: https://terabaud.github.io/css-practise
 
