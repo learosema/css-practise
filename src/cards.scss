@@ -53,16 +53,17 @@ body {
   
   .card__front {
     @include fit();    
-    background: mediumslateblue;
-    background-size: 4px 4px;
+    // background: mediumseagreen;
+    background: linear-gradient(45deg, darkslategray, mediumpurple);
+    
     backface-visibility: hidden;
   }
 
   .card__back {
     @include fit();
     transform: rotateY(-180deg);
-    background: url("https://placekitten.com/150/150");
-    background-size: cover;
+    background: #fff url("https://placekitten.com/150/150") center no-repeat;
+    background-size: 90%;
     backface-visibility: hidden;
   }
 
