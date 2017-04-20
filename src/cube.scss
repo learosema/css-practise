@@ -1,0 +1,102 @@
+@mixin flexbox($justifyContent, $alignItems) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+@mixin fit() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: #222;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  // align-items: center;
+  @include flexbox(center, center);
+}
+
+.world {
+  perspective: 800px;
+  width: 100vh;
+  height: 100vh;
+  @include flexbox(center, center);
+}
+
+
+
+
+.cube {
+  $size: 300;
+  
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  width: #{$size}px;
+  height: #{$size}px;
+  position: relative;
+  animation: rotator 3s linear infinite;
+
+  * {
+    background: currentColor;
+    box-shadow: 0 0 40px currentColor;
+  }
+
+  .cube__front {
+    color: deeppink;
+    transform: translateZ(#{$size/2}px);
+    @include fit();
+  }
+
+  .cube__right {
+    color: lightcoral;
+    transform: rotateY(90deg) translateZ(#{$size/2}px);
+    @include fit();
+  }
+
+  .cube__left {
+    color: skyblue;
+    transform: rotateY(270deg) translateZ(#{$size/2}px);
+    @include fit();
+  }
+
+  .cube__back { 
+    color: seagreen;
+    @include fit();
+    transform: rotateY(180deg) translateZ(#{$size/2}px); 
+  }
+
+  .cube__top {
+    color: mediumseagreen;
+    transform: rotateX(90deg) translateZ(#{$size/2}px);
+    @include fit();
+  }
+
+  .cube__bottom {
+    color: dodgerblue;
+    transform: rotateX(270deg) translateZ(#{$size/2}px);
+    @include fit();
+  }
+
+}
+
+
+@keyframes rotator {
+  0%  {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+
+}
