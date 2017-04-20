@@ -33,7 +33,6 @@ body {
   overflow: hidden;
   perspective: 1000;
   transform-style: preserve-3d;
-  flex-direction: column-reverse;
   @include flexbox("space-between", "space-around");
 }
 
@@ -45,7 +44,7 @@ body {
   width: 10%;
   height: 10%;
   border: 2px solid #000;
-  transition: all ease 1.5s;
+  transition: all ease 0.5s;
   position: relative;
   backface-visibility: hidden;
   transform-style: preserve-3d;

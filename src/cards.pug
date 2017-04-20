@@ -9,6 +9,6 @@ html(lang="en")
   body
     .world
       - for (i = 100; i--;)
-        a.card(href="#"+i)
+        div.card(tabindex=100-i)
           .card__front
           .card__back
