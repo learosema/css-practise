@@ -19,10 +19,6 @@ body {
   width: 100vw;
   height: 100vh;
   background: #222;
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: center;
-  // align-items: center;
   @include flexbox(center, center);
 }
 
@@ -33,57 +29,61 @@ body {
   @include flexbox(center, center);
 }
 
-
-
-
 .cube {
-  $size: 300;
+  $size: 50;
   
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  width: #{$size}px;
-  height: #{$size}px;
+  width: #{$size}vh;
+  height: #{$size}vh;
   position: relative;
-  animation: rotator 3s linear infinite;
+  animation: rotator 4.5s linear infinite;
+  outline: 0;
 
   * {
+    background: #000;
+    box-shadow: 0 0 3vh currentColor;
+    transition: background 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  }
+
+  &:hover * {
     background: currentColor;
-    box-shadow: 0 0 40px currentColor;
+    box-shadow: 0 0 20vh currentColor;
   }
 
   .cube__front {
     color: deeppink;
-    transform: translateZ(#{$size/2}px);
+    transform: translateZ(#{$size/2}vh);
     @include fit();
   }
 
   .cube__right {
     color: lightcoral;
-    transform: rotateY(90deg) translateZ(#{$size/2}px);
+    transform: rotateY(90deg) translateZ(#{$size/2}vh);
     @include fit();
   }
 
   .cube__left {
     color: skyblue;
-    transform: rotateY(270deg) translateZ(#{$size/2}px);
+    transform: rotateY(270deg) translateZ(#{$size/2}vh);
     @include fit();
   }
 
   .cube__back { 
     color: seagreen;
     @include fit();
-    transform: rotateY(180deg) translateZ(#{$size/2}px); 
+    transform: rotateY(180deg) translateZ(#{$size/2}vh); 
   }
 
   .cube__top {
     color: mediumseagreen;
-    transform: rotateX(90deg) translateZ(#{$size/2}px);
+    transform: rotateX(90deg) translateZ(#{$size/2}vh);
     @include fit();
   }
 
   .cube__bottom {
     color: dodgerblue;
-    transform: rotateX(270deg) translateZ(#{$size/2}px);
+    transform: rotateX(270deg) translateZ(#{$size/2}vh);
     @include fit();
   }
 
@@ -94,9 +94,7 @@ body {
   0%  {
     transform: rotateX(0deg) rotateY(0deg);
   }
-
   100% {
     transform: rotateX(360deg) rotateY(360deg);
   }
-
 }
