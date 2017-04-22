@@ -36,7 +36,7 @@ body {
     content: '';
     @include fit();
     background: #fff;
-    transition: all ease-in 0.5s;
+    transition: transform ease-in 0.5s, background ease-in 0.5s;
     transform:  rotate(180deg) translateY(7vmin);
   }
 
@@ -48,17 +48,14 @@ body {
     transition: all ease-in 0.5s;
   }
 
-
-  &:hover {
+  &:focus {
     background: #000;
 
     &::after {
       transform: translateY(0) rotate(45deg);
-      opacity: 1.0;
     }
     &::before {
       transform: translateY(0) rotate(-45deg);
-      opacity: 1.0;
     }
 
   }
