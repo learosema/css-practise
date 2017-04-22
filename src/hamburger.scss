@@ -28,8 +28,10 @@ body {
   background: #fff;
   position: relative;
   transition: all ease-in 0.2s;
-  border-top: 10vmin solid #000;
-  border-bottom: 10vmax solid #000;
+  border: 10vmin solid #000;
+  text-decoration: none;
+  display: block;
+  
   &::before {
     content: '';
     @include fit();
@@ -48,12 +50,15 @@ body {
 
 
   &:hover {
-    transform: rotate(45deg);
+    background: #000;
+
     &::after {
-      transform: translateY(0) rotate(90deg);
+      transform: translateY(0) rotate(45deg);
+      opacity: 1.0;
     }
     &::before {
-      transform: translateY(0) rotate(-90deg);
+      transform: translateY(0) rotate(-45deg);
+      opacity: 1.0;
     }
 
   }
