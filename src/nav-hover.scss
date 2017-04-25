@@ -52,6 +52,8 @@ nav {
     height: 100%;
     cursor: pointer;
     @include flexbox(center, center);
+    box-sizing: border-box;
+    padding: 2vmin;
 
     &:hover {
       a::after {
