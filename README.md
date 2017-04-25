@@ -12,4 +12,4 @@ This is a pug + scss playground for my personal scss practising purposes: https:
 ### TODOs
 
  * Get live update to work
- * autogenerate a directory of all demos into the `index.pug`
+ * add social features (likes, comments and stuff)
