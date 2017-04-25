@@ -1,0 +1,65 @@
+@mixin flexbox($justifyContent, $alignItems) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+@mixin fit() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #222;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+nav {
+  width: 100vw;
+  height: 20vh;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: salmon;
+    height: 100%;
+    @include flexbox(space-around, center)
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 10vmin;
+    
+  }
+
+  a {
+    position: relative;
+  }
+
+  a::after {
+    @include fit();
+    left: 50%;
+    width: 0%;
+    border-bottom: 1vmin solid white;
+    content: '';
+    transition: width ease .25s, left ease .25s;
+  }
+
+  a:hover {
+    &::after {
+      width: 100%;
+      left: 0%;
+    }
+  }
+
+
+
+}
+
