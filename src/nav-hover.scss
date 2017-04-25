@@ -21,7 +21,7 @@ body {
 
 nav {
   width: 100vw;
-  height: 20vh;
+  height: 20vmin;
 
   ul {
     list-style: none;
@@ -36,10 +36,6 @@ nav {
     color: white;
     text-decoration: none;
     font-size: 10vmin;
-    
-  }
-
-  a {
     position: relative;
   }
 
@@ -51,15 +47,18 @@ nav {
     content: '';
     transition: width ease .25s, left ease .25s;
   }
+  
+  li {
+    height: 100%;
+    cursor: pointer;
+    @include flexbox(center, center);
 
-  a:hover {
-    &::after {
-      width: 100%;
-      left: 0%;
+    &:hover {
+      a::after {
+        width: 100%;
+        left: 0%;
+      }
     }
   }
-
-
-
 }
 
