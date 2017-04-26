@@ -1,0 +1,25 @@
+@mixin flexbox($justifyContent, $alignItems) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+@mixin fit() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: white;
+  margin: 0;
+  overflow: hidden;
+}
+
+.sphere {
+  border-radius: 50%;
+  background: #ccc, radial-gradient(circle at 25%, 25%, #fff, #ccc);
+}
