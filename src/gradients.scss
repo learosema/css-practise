@@ -17,9 +17,13 @@ body {
   background: white;
   margin: 0;
   overflow: hidden;
+  @include fit();
+  @include flexbox(center, center);
 }
 
 .sphere {
   border-radius: 50%;
-  background: #ccc, radial-gradient(circle at 25%, 25%, #fff, #ccc);
+  background: radial-gradient(circle at 25% 25%, #fff 0%, #ccc 50%);
+  width: 50vmin;
+  height: 50vmin;
 }
