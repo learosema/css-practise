@@ -82,6 +82,17 @@ ul {
   }
 }
 
+@media (max-width: 800px) {
+  body { background: #f0f; }
+  li {
+    display: block;
+    clear: left;
+    float: none;
+    width: 90vw!important;
+    height: 90vh!important;
+  }
+}
+
 .hidden {
   opacity: 0.0;
   transform: translate(0,-20px);
