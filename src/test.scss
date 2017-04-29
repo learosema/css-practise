@@ -27,30 +27,20 @@ body {
 }
 
 .heart {
-  border-radius: 50%;
+  border-radius: 0 0 50% 50%;
   background: salmon;
   width: 25vmin;
-  height: 25vmin;
-  transform: translate(-12.5vmin,-12.5vmin);
+  height: 45vmin;
   position: relative;
+  transform: rotate(45deg) scaleY(-1);
+  transition: transform 1s ease;
 }
 
 .heart::after {
-  border-radius: 50%;
+  border-radius: 0 0 50% 50%;
   @include fit();
   background: salmon;
-  transform: translateX(25vmin);
+  transform: rotate(90deg) scaleX(-1);
+  transform-origin: 100% 0%;
   content: '';
-}
-
-.heart::before {
-  position: absolute;
-  top: 0; left: 0;
-  width: 0vmin;
-  height: 0;
-  content: '';
-  border-left: 25vmin solid transparent;
-  border-right: 25vmin solid transparent;
-  border-top: 35vmin solid salmon;
-  transform: translateY(12vmin);
 }
