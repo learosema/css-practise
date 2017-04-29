@@ -40,7 +40,7 @@ body {
   @include fit();
   background: salmon;
   transform: translateX(25vmin);
-  content: 'xxx';
+  content: '';
 }
 
 .heart::before {
