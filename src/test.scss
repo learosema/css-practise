@@ -21,20 +21,36 @@ body {
   @include flexbox(center, center);
 }
 
-.kreis {
-  color: #f0f;
-  width: 50vmin;
-  height: 50vmin;
-  position: relative;
-  animation: pulsate 0.4s linear infinite;
-}
-
-.kreis::after {
-  @include fit();
-  content: '<3';
-  font-size: 50vmin;
-}
 
 @keyframes pulsate {
   50% { transform: scale(2.0); } 
+}
+
+.heart {
+  border-radius: 50%;
+  background: salmon;
+  width: 25vmin;
+  height: 25vmin;
+  transform: translate(-12.5vmin,-12.5vmin);
+  position: relative;
+}
+
+.heart::after {
+  border-radius: 50%;
+  @include fit();
+  background: salmon;
+  transform: translateX(25vmin);
+  content: 'xxx';
+}
+
+.heart::before {
+  position: absolute;
+  top: 0; left: 0;
+  width: 0vmin;
+  height: 0;
+  content: '';
+  border-left: 25vmin solid transparent;
+  border-right: 25vmin solid transparent;
+  border-top: 35vmin solid salmon;
+  transform: translateY(12vmin);
 }
