@@ -28,7 +28,9 @@ build/Release
 node_modules
 
 # Build folder
-public
+public/*.html
+public/*.css
+public/*.js
 
 #pnpm
 pnpm-debug.log

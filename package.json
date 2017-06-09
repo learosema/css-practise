@@ -4,7 +4,7 @@
   "description": "Personal playground for css experiments",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf public",
+    "clean": "rimraf public/*.html public/*.css public/*.js",
     "start": "npm run build -s && concurrently \"npm run httpd -s\" \"npm run watch-js -s\" \"npm run watch-css -s\" \"npm run watch-html -s\" \"opn http://localhost:8080\"",
     "build": "npm run build-css -s && npm run build-html -s && npm run build-js",
     "build-js": "babel src -d public",
