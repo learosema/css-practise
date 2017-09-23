@@ -1,12 +1,16 @@
 body {
   background: #222;
-  margin: auto;
-  height: 100%;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .circle {
   border-radius: 50%;
   width: 50vmin;
   height: 50vmin;
-  border: 10px dotted #f00;
+  border: 5vmin dotted #f00;
 }
