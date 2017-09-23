@@ -1,0 +1,50 @@
+body {
+  background: #222;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.universe {
+  border-radius: 50%;
+  width: 50vmin;
+  height: 50vmin;
+  background: transparent;
+  border: 3px solid red;
+  position: relative;
+  animation: rotation reverse linear infinite 4s;
+}
+
+.universe::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6vmin;
+  height: 6vmin;
+  margin: -3vmin 0 0 -3vmin;
+  border-radius: 50%;
+  background: #ccc;
+  content: '';
+}
+
+.universe::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 8vmin;
+  height: 8vmin;
+  margin: -4vmin 0 0 -4vmin;
+  border-radius: 50%;
+  background: #eee;
+  content: '';
+  
+}
+
+
+@keyframes rotation {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
