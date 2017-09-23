@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+img.polaroid {
+  background: white;
+  padding: 20px 20px 60px 20px;
+  box-shadow: 0 0 2px 8px rgba(0,0,0,.8);
+}
