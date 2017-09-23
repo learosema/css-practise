@@ -1,0 +1,12 @@
+body {
+  background: #222;
+  margin: auto;
+  height: 100%;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 50vmin;
+  height: 50vmin;
+  border: 10px dotted #f00;
+}
