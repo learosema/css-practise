@@ -1,9 +1,13 @@
 ## Daily CSS experiments
 
-This is a pug + scss playground for my personal scss practising purposes: https://terabaud.github.io/css-practise
-It uses the GitHub API to create a little showcase for my experiments. 
+This is a pug + scss playground for my personal scss practising purposes. It uses the GitHub API 
+to create a little showcase for my experiments. 
 
-### Usage
+### Demo
+
+https://terabaud.github.io/css-practise
+
+### USAGE
 
  * `npm install` to install all packages
  * `npm start` to start a development server at `localhost:8080`, watching all scss and pug files in the `src` folder
@@ -14,3 +18,7 @@ It uses the GitHub API to create a little showcase for my experiments.
 
  * Get live update to work
  * add social features (likes, comments and stuff)
+
+ ### LICENSE
+
+ * WTFPL
