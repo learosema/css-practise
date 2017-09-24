@@ -1,3 +1,7 @@
+:root {
+  --pointer-radius: 5%;
+}
+
 @mixin flexbox($justifyContent, $alignItems) {
   display: flex;
   flex-wrap: wrap;
@@ -16,20 +20,24 @@
 body {
   margin: 0;
   height: 100vh;
+  background: #222;
   @include flexbox(center, center);
 }
 
 .wrapper {
   width: 50vmin;
   height: 50vmin;
+  border: 1px solid red;
   @include flexbox(center, center);
 }
 
 .tile {
+  position: relative;
   width: 50%;
   height: 50%;
   @include flexbox(center, center);
   background: black;
+  transition: transform 0.5s ease;
 }
 
 .tile:nth-child(2), .tile:nth-child(3) {
@@ -37,8 +45,12 @@ body {
 }
 
 .tile:first-child::after {
-  width: 50%;
-  height: 50%;
+  position: absolute;
+  top: calc(50% - var(--pointer-radius));
+  left: calc(50% - var(--pointer-radius));
+  width: calc(var(--pointer-radius) * 2);
+  height: calc(var(--pointer-radius) * 2);
   background: red;
   border-radius: 50%;
+  content: '';
 }
