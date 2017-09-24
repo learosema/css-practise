@@ -29,8 +29,13 @@ const http = (url, callback) => {
   xhr.send()
   xhr.onload = () => {
     const data = JSON.parse(xhr.responseText)
+    sessionStorage.setItem("repository_content", xhr.responseText)
     callback(data)
   }
 }
 
 http('https://api.github.com/repos/terabaud/css-practise/contents/src', render)
+if (! navigator.onLine) {
+  const offlineData = JSON.parse(sessionStorage.getItem("repository_content"))
+  render(offlineData)
+}
