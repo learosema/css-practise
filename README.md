@@ -1,4 +1,4 @@
-## Daily CSS experiments
+## CSS experiments
 
 This is a pug + scss playground for my personal scss practising purposes. It uses the GitHub API 
 to create a little showcase for my experiments. 
