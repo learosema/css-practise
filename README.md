@@ -19,6 +19,3 @@ https://terabaud.github.io/css-practise
  * Get live update to work
  * add social features (likes, comments and stuff)
 
- ### LICENSE
-
- * WTFPL
