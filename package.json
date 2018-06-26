@@ -29,11 +29,10 @@
   },
   "homepage": "https://github.com/terabaud/css-practise#readme",
   "devDependencies": {
-    "babel-cli": "^6.24.1",
+    "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.0",
-    "babel-preset-stage-2": "^6.24.1",
-    "concurrently": "^3.4.0",
-    "gh-pages": "^1.0.0",
+    "concurrently": "^3.6.0",
+    "gh-pages": "^1.2.0",
     "http-server": "^0.10.0",
     "mathsass": "^0.10.1",
     "node-sass": "^4.9.0",
@@ -42,7 +41,7 @@
     "postcss": "^6.0.11",
     "postcss-cli": "^4.1.1",
     "postcss-cssnext": "^3.0.2",
-    "pug": "^2.0.0-beta11",
+    "pug": "^2.0.3",
     "pug-cli": "^1.0.0-alpha6",
     "rimraf": "^2.6.1"
   },
